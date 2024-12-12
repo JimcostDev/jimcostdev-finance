@@ -138,3 +138,16 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ),
 }
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Documentación de la API de JimcostDev Finance',
+    'DESCRIPTION': 'API para la gestión de finanzas personales: ingresos, gastos y reportes.',
+    'VERSION': '1.0.0',
+    'TAGS': [
+        {'name': 'Incomes', 'description': 'Operaciones relacionadas con ingresos.'},
+        {'name': 'Expenses', 'description': 'Operaciones relacionadas con gastos.'},
+        {'name': 'Expense Categories', 'description': 'Operaciones relacionadas con categorías de gastos.'},
+        {'name': 'Income Categories', 'description': 'Operaciones relacionadas con categorías de ingresos.'},
+        {'name': 'Reports', 'description': 'Operaciones relacionadas con reportes financieros.'},
+    ],
+}

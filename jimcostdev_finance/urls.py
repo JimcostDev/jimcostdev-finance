@@ -11,6 +11,7 @@ from finances.viewsets import (
 
 from finances.views import ReportView  # Vista personalizada para el reporte
 
+
 # Crear un router único
 router = DefaultRouter()
 router.register('income-categories', IncomeCategoryViewSet, basename='income-category')
@@ -24,4 +25,5 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include(router.urls)),
     path('api/reports/', ReportView.as_view(), name='report-view'), 
+    path('', include('docs.urls')),  # Documentación
 ]
